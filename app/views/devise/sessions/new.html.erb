@@ -1,25 +1,25 @@
-<h2>Log in</h2>
+<h2><%= t('.sign_in') %></h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form">
+  <div class="form-control">
     <%= f.label :email %><br />
-    <%= f.email_field :email,class: "form-control" %>
+    <%= f.email_field :email, class: "form-control" %>
   </div>
 
-  <div class="form">
+  <div class="form-control">
     <%= f.label :password %><br />
     <%= f.password_field :password, class: "form-control" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="form-check">
+    <div class="form-control">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in", class: "btn btn-lg btn-primary" %>
+    <%= f.submit t('.sign_in'), class: 'btn btn-primary' %>
   </div>
 <% end %>
 
