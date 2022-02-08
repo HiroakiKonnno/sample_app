@@ -1,0 +1,12 @@
+<h1>記事編集</h1>
+<%= form_with(model: @article, url:user_article_path, method: :put, local: true) do |f| %>
+  <h5>タイトル</h5>
+  <%= f.text_field :title, class: 'form-control' %>
+  <h5>本文</h5>
+  <%= f.text_field :content, class: 'form-control' %>
+  <h5>画像</h5>
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
+  <%= f.submit "更新", class: "btn btn-primary btn-block btn-signup" %>
+<% end %>
